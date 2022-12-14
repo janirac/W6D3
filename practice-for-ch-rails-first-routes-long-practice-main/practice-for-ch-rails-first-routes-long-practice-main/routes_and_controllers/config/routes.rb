@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # resources :users
+  resources :users
 
   # get 'users', to: 'user#index', as: 'users'
   # post 'users', to: 'user#create'
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   # delete '/users/:id', to: 'users#destroy'
 
   # resources :users, only: [:index, :show, :create, :update]
-  resources :users, except: [:new, :edit]
+  # resources :users, except: [:new, :edit]
   
 
   # Defines the root path route ("/")
