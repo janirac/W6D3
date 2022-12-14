@@ -3,11 +3,17 @@ Rails.application.routes.draw do
 
   # resources :users
 
-  get 'users/:id', to: 'users#show', as: 'user'
-  get 'users', to: 'user#index'
-  get 'users/new', to: 'user#new'
-  get 'users/:id/edit', to: 'user#edit'
-  post 'users', to: 'user#create'
+  # get 'users', to: 'user#index', as: 'users'
+  # post 'users', to: 'user#create'
+  # get 'users/new', to: 'user#new', as: 'new_user'
+  # get 'users/:id/edit', to: 'user#edit', as: 'edit_user'
+  # get 'users/:id', to: 'users#show', as: 'user'
+  # patch '/users/:id', to: 'user#update'
+  # put '/users/:id', to: 'user#update'
+  # delete '/users/:id', to: 'users#destroy'
+
+  # resources :users, only: [:index, :show, :create, :update]
+  resources :users, except: [:new, :edit]
   
 
   # Defines the root path route ("/")
