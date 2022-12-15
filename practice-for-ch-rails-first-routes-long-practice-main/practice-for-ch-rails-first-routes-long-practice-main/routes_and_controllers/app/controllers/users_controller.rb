@@ -5,15 +5,21 @@ class UsersController < ApplicationController
         users = User.all
         render json: users 
     end
-    #TESTING
+    
     def create
-        render json: params
+        # render json: params
+        user = User.new(params.require(:user).permit(:name, :email))
+        # user.save!
+        
+        if user.save
+            render json: user
+        else
+            render json: user.errors.full_messages, status: 422
+        end
     end
 
     def show 
         render json: params 
     end
-
-    
 
 end
