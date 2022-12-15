@@ -5,7 +5,7 @@ class UsersController < ApplicationController
         users = User.all
         render json: users 
     end
-
+    #TESTING
     def create
         render json: params
     end
