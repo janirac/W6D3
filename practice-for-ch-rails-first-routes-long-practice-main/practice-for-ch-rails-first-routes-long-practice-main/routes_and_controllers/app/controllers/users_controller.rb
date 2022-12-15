@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
     def index
         # render plain: "I'm in the index action!" 
+        # testing github setup
         users = User.all
         render json: users 
     end
